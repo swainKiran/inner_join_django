@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS for centering the table and increasing its size */
+        .center {
+            margin: 0 auto;
+            width: 80%; /* Adjust the width as per your requirement */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%; /* Adjust the width of the table */
+            background-color: aqua;
+        }
+        th, td {
+            border: 1px solid black; /* Border for cells */
+            padding: 8px; /* Padding inside cells */
+            text-align: left; /* Align text inside cells */
+        }
+        th
+        {
+            background-color: darkkhaki;
+        }
+       
+    </style>
+</head>
+
+<body>
+    
+    <div class="center">
+        <center>
+        <h1>update_DATA</h1>
+        </center>
+        <table>
+            <tr>
+                <th>emp_id</th>
+                <th>emp_name</th>
+                <th>emp_sal</th>
+                <th>job</th>
+                <th>hire_date</th>
+                <th>mgr</th>
+                <th>coomition </th>
+                <th>deptid</th>
+                
+            </tr>
+
+            {% for E in EMDO %}
+            <tr>
+                <td>{{E.emp_id}}</td>
+                <td>{{E.emp_name}}</td>
+                <td>{{E.emp_sal}}</td>
+                <td>{{E.job}}</td>
+                <td>{{E.hire_date}}</td>
+                <td>{{E.mgr}}</td>
+                <td>{{E.coomition}}</td>
+                <td>{{E.deptid}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </div>
+</body>
+</html>
